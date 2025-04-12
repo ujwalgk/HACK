@@ -1,232 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduVillage Connect</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>EduVillage Connect</h1>
-            <div class="offline-status" id="offlineStatus">Offline</div>
-        </header>
-        
-        <div class="language-selector">
-            <select id="languageSelect">
-                <option value="en">English</option>
-                <option value="hi">हिंदी</option>
-                <option value="ta">தமிழ்</option>
-                <option value="te">తెలుగు</option>
-            </select>
-        </div>
-        
-        <div class="content-categories">
-            <div class="category" onclick="loadContent('math')">
-                <img src="icons/math.png" alt="Math">
-                <span id="mathLabel">Mathematics</span>
-            </div>
-            <div class="category" onclick="loadContent('science')">
-                <img src="icons/science.png" alt="Science">
-                <span id="scienceLabel">Science</span>
-            </div>
-            <div class="category" onclick="loadContent('language')">
-                <img src="icons/language.png" alt="Language">
-                <span id="languageLabel">Language</span>
-            </div>
-        </div>
-        
-        <div class="content-viewer" id="contentViewer">
-            <div class="back-button" onclick="hideContent()" id="backButton">Back</div>
-            <h2 id="contentTitle">Content Title</h2>
-            <div class="content" id="contentDisplay">
-                <!-- Content will be loaded here -->
-            </div>
-        </div>
-        
-        <div class="sync-button" id="syncButton" onclick="syncContent()">
-            Sync When Online
-        </div>
-    </div>
-    
-    <script src="app.js"></script>
-    <script src="service-worker.js"></script>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>academic-insight-buddy</title>
+    <meta name="description" content="Lovable Generated Project" />
+    <meta name="author" content="Lovable" />
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website - To-Do List</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>My Website</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/todo" class="active">To-Do List</a>
-            <a href="/contact">Contact</a>
-        </nav>
-    </header>
+    <meta property="og:title" content="academic-insight-buddy" />
+    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <main>
-        <section class="todo-container">
-            <h2>My To-Do List</h2>
-            
-            <div class="todo-input">
-                <input type="text" id="todoInput" placeholder="Add a new task...">
-                <button id="addBtn">Add</button>
-            </div>
-            
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="active">Active</button>
-                <button class="filter-btn" data-filter="completed">Completed</button>
-            </div>
-            
-            <ul id="todoList">
-                <!-- Tasks will be added here dynamically -->
-            </ul>
-            
-            <div class="todo-footer">
-                <span id="taskCount">0 tasks left</span>
-                <button id="clearCompleted">Clear Completed</button>
-            </div>
-        </section>
-    </main>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
 
-    <footer>
-        <p>&copy; 2023 My Website. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website - Enhanced To-Do List</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>My Website</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/todo" class="active">To-Do List</a>
-            <a href="/contact">Contact</a>
-            <div class="user-section">
-                <span id="username">Guest</span>
-                <button id="loginBtn">Login</button>
-                <button id="logoutBtn" style="display:none">Logout</button>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="todo-container">
-            <h2>My Enhanced To-Do List</h2>
-            
-            <div class="user-controls" style="display:none">
-                <button id="saveToCloudBtn"><i class="fas fa-cloud-upload-alt"></i> Save to Cloud</button>
-                <button id="loadFromCloudBtn"><i class="fas fa-cloud-download-alt"></i> Load from Cloud</button>
-            </div>
-            
-            <div class="todo-input">
-                <input type="text" id="todoInput" placeholder="Add a new task...">
-                <input type="date" id="dueDateInput">
-                <select id="categoryInput">
-                    <option value="">No Category</option>
-                    <option value="work">Work</option>
-                    <option value="personal">Personal</option>
-                    <option value="shopping">Shopping</option>
-                    <option value="other">Other</option>
-                </select>
-                <input type="text" id="tagsInput" placeholder="Tags (comma separated)">
-                <button id="addBtn">Add</button>
-            </div>
-            
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="active">Active</button>
-                <button class="filter-btn" data-filter="completed">Completed</button>
-                <select id="categoryFilter">
-                    <option value="">All Categories</option>
-                    <option value="work">Work</option>
-                    <option value="personal">Personal</option>
-                    <option value="shopping">Shopping</option>
-                    <option value="other">Other</option>
-                </select>
-                <input type="date" id="dateFilter" placeholder="Filter by date">
-                <input type="text" id="tagFilter" placeholder="Filter by tag">
-            </div>
-            
-            <ul id="todoList">
-                <!-- Tasks will be added here dynamically -->
-            </ul>
-            
-            <div class="todo-footer">
-                <span id="taskCount">0 tasks left</span>
-                <button id="clearCompleted">Clear Completed</button>
-            </div>
-        </section>
-
-        <!-- Login Modal -->
-        <div id="loginModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Login / Register</h2>
-                <form id="loginForm">
-                    <div>
-                        <label for="loginEmail">Email:</label>
-                        <input type="email" id="loginEmail" required>
-                    </div>
-                    <div>
-                        <label for="loginPassword">Password:</label>
-                        <input type="password" id="loginPassword" required>
-                    </div>
-                    <button type="submit">Login</button>
-                    <button type="button" id="showRegisterBtn">Register</button>
-                </form>
-                <form id="registerForm" style="display:none">
-                    <div>
-                        <label for="registerName">Name:</label>
-                        <input type="text" id="registerName" required>
-                    </div>
-                    <div>
-                        <label for="registerEmail">Email:</label>
-                        <input type="email" id="registerEmail" required>
-                    </div>
-                    <div>
-                        <label for="registerPassword">Password:</label>
-                        <input type="password" id="registerPassword" required>
-                    </div>
-                    <div>
-                        <label for="registerConfirmPassword">Confirm Password:</label>
-                        <input type="password" id="registerConfirmPassword" required>
-                    </div>
-                    <button type="submit">Register</button>
-                    <button type="button" id="showLoginBtn">Back to Login</button>
-                </form>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 My Website. All rights reserved.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
-    <script src="script.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
