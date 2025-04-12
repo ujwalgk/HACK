@@ -1,7 +1,7 @@
 {
     "name": "study reach",
     "short_name": "EduVillage",
-    "start_url": "/index.html",
+    "start_url": "http://127.0.0.1:5500/index.html",
     "display": "standalone",
     "background_color": "#f5f5f5",
     "theme_color": "#3498db",
@@ -46,6 +46,18 @@
             "src": "icons/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        }
+    ],
+    "link": [
+        {
+            "rel": "stylesheet",
+            "href": "styles.css"
+        }
+    ],
+    "script": [
+        {
+            "src": "app.js",
+            "defer": true
         }
     ]
 }
